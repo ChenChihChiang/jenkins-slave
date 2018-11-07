@@ -6,6 +6,10 @@ USER root
 RUN apk upgrade
 RUN apk add gawk
 RUN apk add curl
+RUN apk add docker
+RUN apk add python
+RUN apk add py-pip
+RUN pip install awscli 
 
 COPY jenkins-slave /usr/local/bin/jenkins-slave
 COPY docker-java-home /usr/local/bin/docker-java-home
