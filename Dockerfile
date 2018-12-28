@@ -9,7 +9,10 @@ RUN apk add curl
 RUN apk add docker
 RUN apk add python
 RUN apk add py-pip
-RUN pip install awscli 
+RUN pip install awscli
+RUN apk add php
+RUN apk add php-curl
+RUN apk add php-json
 
 COPY jenkins-slave /usr/local/bin/jenkins-slave
 COPY docker-java-home /usr/local/bin/docker-java-home
