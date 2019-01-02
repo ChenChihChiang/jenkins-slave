@@ -121,12 +121,17 @@ under the License.
       <username>repouser</username>
       <password>repopwd</password>
     </server>
+    -->
     <server>
       <id>releases</id>
       <username>${env.NEXUS_USERNAME}</username>
       <password>${env.NEXUS_PASSWORD}</password> 
     </server>
-    -->
+    <server>                                                                                                          
+      <id>snapshots</id>                                                                                               
+      <username>${env.NEXUS_USERNAME}</username>                                                                      
+      <password>${env.NEXUS_PASSWORD}</password>                                                                      
+    </server> 
 
     <!-- Another sample, using keys to authenticate.
     <server>

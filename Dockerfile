@@ -18,12 +18,8 @@ RUN apk add php
 RUN apk add php-curl
 RUN apk add php-json
 
-WORKDIR /
-RUN git clone https://github.com/phacility/libphutil.git
-RUN git clone https://github.com/phacility/arcanist.git
-#RUN chown -R jenkins:jenkins libphutil
-#RUN chown -R jenkins:jenkins arcanist
-#RUN ln -s /home/jenkins/arcanist/bin/arc /bin/arc
+RUN git clone https://github.com/phacility/libphutil.git /libphutil
+RUN git clone https://github.com/phacility/arcanist.git /arcanist
 
 COPY settings.xml /usr/share/java/maven-3/conf/
 COPY jenkins-slave /usr/local/bin/jenkins-slave
