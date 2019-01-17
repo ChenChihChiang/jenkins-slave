@@ -4,6 +4,7 @@ LABEL Description="This is a base image, which allows connecting Jenkins agents 
 USER root
 
 RUN apk upgrade
+RUN apk add redis
 RUN apk add maven
 RUN apk add gawk
 RUN apk add curl
