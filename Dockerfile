@@ -25,7 +25,7 @@ RUN git clone https://github.com/phacility/arcanist.git /arcanist
 COPY settings.xml /usr/share/java/maven-3/conf/
 COPY jenkins-slave /usr/local/bin/jenkins-slave
 COPY docker-java-home /usr/local/bin/docker-java-home
-COPY values.py /usr/local/bin/
-RUN chmod 755 /usr/local/bin/values.py
+COPY staging_values.py  /usr/local/bin/
+RUN chmod 755 /usr/local/bin/staging_values.py 
 
 ENTRYPOINT ["jenkins-slave"]
