@@ -10,4 +10,4 @@ if __name__ == "__main__":
         content['staging_image']['tag1'] = sys.argv[2]
 
     with open('values.yaml', 'w') as nf:
-        yaml.dump(content, nf)
+yaml.dump(content, nf)
