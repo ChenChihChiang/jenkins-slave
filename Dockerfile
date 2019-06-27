@@ -26,10 +26,14 @@ COPY settings.xml /usr/share/java/maven-3/conf/
 COPY jenkins-slave /usr/local/bin/jenkins-slave
 COPY docker-java-home /usr/local/bin/docker-java-home
 COPY version.py  /usr/local/bin/
-COPY values.py  /usr/local/bin/
-COPY dev_values.py  /usr/local/bin/
+COPY values_prod.py  /usr/local/bin/
+COPY values_canary.py  /usr/local/bin/
+COPY values_dev.py  /usr/local/bin/
+COPY staging_values.py  /usr/local/bin/
 RUN chmod 755 /usr/local/bin/version.py 
-RUN chmod 755 /usr/local/bin/values.py 
-RUN chmod 755 /usr/local/bin/dev_values.py 
+RUN chmod 755 /usr/local/bin/values_prod.py 
+RUN chmod 755 /usr/local/bin/values_canary.py 
+RUN chmod 755 /usr/local/bin/values_dev.py 
+RUN chmod 755 /usr/local/bin/staging_values.py 
 
 ENTRYPOINT ["jenkins-slave"]
